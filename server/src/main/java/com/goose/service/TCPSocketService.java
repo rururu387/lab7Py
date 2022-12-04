@@ -39,8 +39,6 @@ public class TCPSocketService {
                 var messageDTO = jsonMapper.fromJson(message, MessageDTO.class);
                 mailService.sendMessage(messageDTO.getDestination(), messageDTO.getContent());
             }
-        }/* catch (MessagingException e) {
-            e.printStackTrace();
-        }*/
+        }
     }
 }
